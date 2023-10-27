@@ -55,7 +55,7 @@ Your objective is to gather as many TD-ERC20-101 points as possible. Please note
 - Create a `getToken()` function in your contract, deploy it, and call the `ex3_testGetToken()` function that distributes token to the caller (2 pts).
 - Create a `buyToken()` function in your contract, deploy it, and call the `ex4_testBuyToken()` function that lets the caller send an arbitrary amount of ETH, and distributes a proportionate amount of token (2 pts).
 
-### Creating an ICO allow list
+### Creating an ICO allow list  
 
 - Create a customer allow listing function. Only allow listed users should be able to call `getToken()`
 - Call `ex5_testDenyListing()` in the evaluator to show he can't buy tokens using `buyTokens()` (1 pt)
