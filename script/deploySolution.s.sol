@@ -8,9 +8,9 @@ contract CounterScript is Script {
     function setUp() public {}
 
     function run() public {
-        string memory privateKey = vm.envString("PRIVATE_KEY");
+        uint256 privateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(privateKey);
-        kAvx3 myContract = new kAvx3('yes', 'yes', 1000);
+        kAvx3 myContract = new kAvx3('kAvx3', 'kAvx3', 833247979000000000000000000);
         vm.stopBroadcast();
     }
 }
