@@ -10,7 +10,7 @@ contract CounterScript is Script {
     function run() public {
         uint256 privateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(privateKey);
-        kAvx3 myContract = new kAvx3('kAvx3', 'kAvx3', 833247979000000000000000000);
+        kAvx3 myContract = new kAvx3('-NTqc', '-NTqc', 906541972000000000000000000);
         vm.stopBroadcast();
     }
 }

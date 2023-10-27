@@ -22,7 +22,9 @@ contract kAvx3 is IExerciceSolution, ERC20 {
         admin = msg.sender;
     }
 
-  function symbol() override(IExerciceSolution, ERC20) public view returns (string memory) {}
+  function symbol() override(IExerciceSolution, ERC20) public view returns (string memory) {
+    return ERC20.symbol();
+  }
     
   function getToken() override public returns (bool) {
     require(whiteList[msg.sender], "White-listed only");
@@ -37,9 +39,9 @@ contract kAvx3 is IExerciceSolution, ERC20 {
   }
 
   function buyToken() override public payable returns (bool) {
-    require(tierList[msg.sender] > 0, "Should be listed");
+    // require(tierList[msg.sender] > 0, "Should be listed");
 
-    _mint(msg.sender, msg.value * tierList[msg.sender]);
+    _mint(msg.sender, msg.value);
 
     return true;
   }
